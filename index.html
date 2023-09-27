@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font font-family: Arial, sans-serif;
+            text-align:center;
+            background-color: silver;
+        }
+        h1{
+            color:#333;
+        }
+        p{
+            font-size: 18px;
+            margin:20px;
+        }
+        img{
+            border:3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>variable demo</h1>
+    <div>
+        <img src="WhatsApp Image 2023-09-27 at 3.39.02 PM (1).jpeg" alt="var" id="varid">
+        <p id="varOutput"> variable declared with let</p>
+    </div>
+
+    <div>
+        <img src="WhatsApp Image 2023-09-27 at 3.39.03 PM.jpeg" alt="let" id="letid">
+        <p id="letOutput"> variable declared with let</p>
+    </div>
+
+    <div>
+        <img src="WhatsApp Image 2023-09-27 at 3.39.02 PM.jpeg" alt="const" id="constid">
+        <p id="constOutput"> variable declared with const</p>
+    </div>
+      <script>
+        var varValue=" can be reassigned";
+        document.getElementById("varid").addEventListener("click",()=>{
+            document.getElementById("varOutput").textContent+=varValue;
+        });
+        
+
+        let letValue=" also be reassigned";
+        document.getElementById("letid").addEventListener("click",()=>{
+            document.getElementById("letOutput").textContent+=letValue;
+        });
+
+        const constValue="not possible";
+        document.getElementById("constid").addEventListener("click",()=>{
+            document.getElementById("constOutput").textContent=constValue;
+        });
+      </script>
+</body>
+</html>
